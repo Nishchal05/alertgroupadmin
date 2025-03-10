@@ -1,9 +1,10 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Page = () => {
   const [applications, setApplications] = useState([]);
-
+  const router =useRouter
   useEffect(() => {
     const fetchApplications = async () => {
       const res = await fetch("/api/application");

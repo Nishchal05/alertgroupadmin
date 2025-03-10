@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const JobForm = () => {
@@ -14,7 +15,7 @@ const JobForm = () => {
     company: "",
     deadline: "",
   });
-
+const router=useRouter();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -31,6 +32,7 @@ const JobForm = () => {
       });
       if (response.ok) {
         alert("Job posted successfully!");
+        router.push('/JobSection')
       } else {
         alert("Failed to post job");
       }

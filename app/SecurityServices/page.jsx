@@ -58,12 +58,12 @@ const SecurityServices = () => {
             services.map((service, index) => (
               <div
                 key={index}
-                className="border w-[250px] h-[250px] rounded-lg p-4 flex flex-col justify-between"
+                className="border w-[340px] h-fit rounded-lg p-4 flex flex-col justify-between"
               >
                 <div>
-                  <h2 className="text-xl font-semibold text-white">Service Name: {service.serviceName}</h2>
-                  <p className="text-gray-200">Heading: {service.subHeading}</p>
-                  <p className="text-sm text-gray-200 mt-2">Discription: {service.description}</p>
+                  <h2 className="text-xl font-semibold text-white"><span className=" text-white text-xl">Service Name:</span> {service.serviceName}</h2>
+                  <p className="text-gray-200"><span className=" text-white text-xl">Heading:</span> {service.subHeading}</p>
+                  <p className="text-sm text-gray-200 mt-2"><span className=" text-white text-xl">Discription:</span> {service.description}</p>
                 </div>
 
                 {/* Edit/Delete Icons */}

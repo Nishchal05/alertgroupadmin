@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { CldUploadWidget } from "next-cloudinary"; // Ensure the import is correct
+import { useRouter } from "next/navigation";
 
 const SecurityServiceForm = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const SecurityServiceForm = () => {
     subHeading: "",
     description: "",
   });
+  const router=useRouter();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -33,6 +35,7 @@ const SecurityServiceForm = () => {
 
       if (res.ok) {
         alert("Service added successfully!");
+        router.push('/SecurityServices');
         setFormData({
           serviceName: "",
           type: "Security Services",
