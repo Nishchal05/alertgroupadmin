@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { datatransfer } from './_component/context'
 
 const page = () => {
-  const {usertype}=useContext(datatransfer);
+  const {usertype,Login}=useContext(datatransfer);
   return (
     <div className="p-4 bg-gray-800 min-h-screen">
-      <div className="grid grid-cols-3 gap-4">
+    {Login ? <div className="grid grid-cols-3 gap-4">
         {/* First Box */}
         <div className=" cursor-pointer p-6 h-[200px] flex justify-center items-center bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <Link href='/JobSection'>
@@ -40,7 +40,8 @@ const page = () => {
           </Link>
         </div>
         }
-      </div>
+      </div>:<h1 className=' text-xl text-white'>Login First!!</h1>}
+      
     </div>
   )
 }

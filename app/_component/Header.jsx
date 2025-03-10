@@ -14,7 +14,7 @@ import { datatransfer } from "./context";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
-  const { user, usertype, setusertype } = useContext(datatransfer);
+  const { Login, setLogin, usertype, setusertype } = useContext(datatransfer);
   const [token, setToken] = useState(null);
   const router = useRouter();
   const [asignemploy,setasignemploy]=useState({
@@ -28,7 +28,7 @@ const Header = () => {
       const storedToken = localStorage.getItem("token");
       if (storedToken) {
         setToken(storedToken);
-
+        setLogin(true);
         try {
           const decodedUser = jwtDecode(token);
           if (decodedUser.email == process.env.NEXT_PUBLIC_Email) {
@@ -44,6 +44,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setToken(null);
+    setLogin(false);
     router.push("/");
   };
   const handledata=(e)=>{
