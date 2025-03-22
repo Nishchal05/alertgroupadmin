@@ -92,7 +92,7 @@ const SecurityServiceForm = () => {
 
         {/* Image URL */}
         <div className="space-y-2">
-          <label className="block text-left font-semibold text-gray-800">
+          <label className="block text-left font-semibold text-white">
             Upload Image
           </label>
           <CldUploadWidget

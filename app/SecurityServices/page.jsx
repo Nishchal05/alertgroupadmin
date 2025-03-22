@@ -54,6 +54,7 @@ const SecurityServices = () => {
 
         {/* Display fetched services */}
         <div className="flex flex-wrap gap-4">
+        {console.log(services)}
           {services && (
             services.map((service, index) => (
               <div
@@ -61,6 +62,7 @@ const SecurityServices = () => {
                 className="border w-[340px] h-fit rounded-lg p-4 flex flex-col justify-between"
               >
                 <div>
+                <img src={service.imgUrl}/>
                   <h2 className="text-xl font-semibold text-white"><span className=" text-white text-xl">Service Name:</span> {service.serviceName}</h2>
                   <p className="text-gray-200"><span className=" text-white text-xl">Heading:</span> {service.subHeading}</p>
                   <p className="text-sm text-gray-200 mt-2"><span className=" text-white text-xl">Discription:</span> {service.description}</p>

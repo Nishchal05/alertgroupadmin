@@ -36,7 +36,7 @@ const page = () => {
         {
           usertype && <div className=" cursor-pointer p-6 h-[200px] flex justify-center items-center bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <Link href='/Employdata'>
-            <h1 className="text-xl font-bold text-white cursor-pointer">Employ's</h1>
+            <h1 className="text-xl font-bold text-white cursor-pointer">Staff</h1>
           </Link>
         </div>
         }

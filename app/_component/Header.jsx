@@ -81,7 +81,7 @@ const Header = () => {
   return (
     <header className="flex flex-col sm:flex-row justify-between items-center bg-gray-900 p-4 shadow-lg">
       <Link href='/' className="flex items-center space-x-4 mb-4 sm:mb-0">
-        <img src="/Alertgroup.png" alt="AlertGroup Logo" className="h-8 w-8 sm:h-10 sm:w-10" />
+        <img src="/Alertgroup.png" alt="AlertGroup Logo" className="h-10 w-10 sm:h-10 sm:w-10" />
         <h1 className="text-2xl sm:text-3xl font-bold text-white font-serif">AlertGroup Admin</h1>
       </Link>
 
